@@ -122,11 +122,11 @@
                                     </div>
                                 </div>
                                 <div class="right">
-                                    <div class="like" :class="{active: post.likeType}" @click="post.likeType = true, post.dislikeType=false ">
+                                    <div class="like" :class="{active: post.likeType}" @click="like(post.id)">
                                         <i class="fas fa-thumbs-up"></i>
                                         {{post.like}}
                                     </div>
-                                    <div class="dislike" :class="{passive: post.dislikeType}" @click="post.likeType = false, post.dislikeType = true">
+                                    <div class="dislike" :class="{passive: post.dislikeType}" @click="dislike(post.id)">
                                         <i class="fas fa-thumbs-down"></i>
                                         {{post.dislike}}
                                     </div>

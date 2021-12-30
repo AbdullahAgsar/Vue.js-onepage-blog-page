@@ -177,4 +177,32 @@ const posts = Vue.createApp({
             ],
         };
     },
+    methods:{
+        like(id){
+            if(this.posts[id-1].dislikeType===true){
+                this.posts[id-1].likeType = true;
+                this.posts[id-1].dislikeType = false;
+                this.posts[id-1].dislike -= 1;
+                this.posts[id-1].like += 1;
+            }
+            else if(this.posts[id-1].likeType===false && this.posts[id-1].dislikeType===false){
+                this.posts[id-1].likeType=true;
+                this.posts[id-1].dislike -= 1;
+                this.posts[id-1].like += 1;
+            }
+        },
+        dislike(id){
+            if(this.posts[id-1].likeType===true){
+                this.posts[id-1].likeType = false;
+                this.posts[id-1].dislikeType = true;
+                this.posts[id-1].like -= 1;
+                this.posts[id-1].dislike += 1;
+            }
+            else if(this.posts[id-1].likeType===false && this.posts[id-1].dislikeType===false){
+                this.posts[id-1].dislikeType=true;
+                this.posts[id-1].like -= 1;
+                this.posts[id-1].dislike += 1;
+            }
+        }
+    }
 }).mount('#posts');
