@@ -15,15 +15,11 @@
     <!--Add Animate Css-->
     <link rel="stylesheet" href="./assets/css/animate.css"/>
 
-    <!--Add Js file-->
-    <script type="text/javascript" src="./assets/js/index.js"></script>
-
     <!--Font Avesome-->
-    <link rel="stylesheet" 
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" 
-        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" 
-        crossorigin="anonymous" 
-        referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.0/css/all.min.css" 
+    integrity="sha512-ykRBEJhyZ+B/BIJcBuOyUoIxh0OfdICfHPnPfBy7eIiyJv536ojTCsgX8aqrLQ9VJZHGz4tvYyzOM0lkgmQZGw==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
 
 </head>
 <body>
@@ -36,13 +32,21 @@
             <div class="site-name">
                 WWF
             </div>
-            <div class="user">
-                <div class="user-name">
-                    Abdullah Agsar
-                </div>
-                <div class="user-image">
+            <div class="user" id="user-dropdown">
+                <div class="user-image"  @click=" activeToggle = !activeToggle">
                     <img src="https://avatars.githubusercontent.com/u/72465865?v=4" alt="user-image">
                 </div>
+
+                <div class="user-dropdown"  :class="{ active : activeToggle }" >
+                    <ul>
+                        <li>Abdullah Agsar</li>
+                        <li>
+                            Quit
+                        </li>
+                    </ul>
+                </div>
+                
+                <i class="fas fa-sort-up"></i>
             </div>
         </div>
     </header>
@@ -71,6 +75,11 @@
             </a>
         </div>
     </footer> 
+
+    
+
+    <!--Add Js file-->
+    <script type="text/javascript" src="./assets/js/index.js"></script>
     
 </body>
 </html>

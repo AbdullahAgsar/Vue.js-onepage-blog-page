@@ -1,9 +1,9 @@
 
 
-const head = Vue.createApp({
+const userDropdown = Vue.createApp({
     data(){
         return{
-            title: "My Blog Page"
+            activeToggle : false,
         };
     },
-}).mount("#head");
+}).mount('#user-dropdown');

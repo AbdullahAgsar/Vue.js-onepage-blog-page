@@ -1,5 +1,6 @@
 $primary-bg-color: #625834;
 $bg-color: #FFFBDB;
+$secondary-color: #30362F;
 
 
 *{
@@ -22,6 +23,7 @@ a{
 
 body,html{
     height: 100%;
+    font-family: -apple-system, Roboto, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 body{
@@ -60,6 +62,8 @@ header{
             align-items: center;
             column-gap: 15px;
             cursor: pointer;
+            position: relative;
+            z-index: 1;
 
             .user-name{
                 font-size: 1em;
@@ -69,6 +73,7 @@ header{
             .user-image{
                 height: 50px;
                 
+                
                 img{
                     height: 100%;
                     border-radius: 50%;
@@ -76,6 +81,71 @@ header{
                     border: 2px solid black;
                     animation: userImageAnimation 2s infinite;
                 }
+            }
+
+            .user-dropdown{
+                position: absolute;
+                top: 60%;
+                right: 0;
+                padding-top: 12px;
+                width: 100%;
+                min-width: 150px;
+                z-index: 0;
+                opacity: 0;
+                visibility: hidden;
+                user-select: none;
+                transition: 500ms all;
+
+                &.active{
+                    top: 100%;
+                    opacity: 1;
+                    visibility: visible;
+                    z-index: 2;
+                    user-select: auto;
+                    +i{
+                        opacity: 1;
+                    }
+                }
+
+                ul{
+                    background-color: $secondary-color;
+                    width: 100%;
+                    border-radius: 15px;
+                    padding: 10px;
+
+                    li{
+                        color: $bg-color;
+                        padding: 4px 4px;
+                        word-wrap: break-word;
+                        background-color: transparent;
+                        font-size: 1.1em;
+                        text-align: center;
+                        border-bottom: 1px solid $bg-color;
+                        font-weight: 600;
+                        transition: 600ms background-color, 600ms border-radius;
+                        &:first-child{
+                            border-top: 1px solid $bg-color;
+                        }
+
+                        &:hover{
+                            background-color: $bg-color;
+                            color: $secondary-color;
+                            border-color: transparent;
+                            border-radius: 8px;
+                        }
+                    }
+                }
+            }
+
+            >i{
+                color: $secondary-color;
+                font-size: 2em;
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                opacity: 0;
+                transition: 300ms all;
             }
         }
     }
