@@ -64,7 +64,7 @@ const posts = Vue.createApp({
             posts : [
                 {
                     id: 1,
-                    image: "https://avatars.githubusercontent.com/u/72465865?v=4",
+                    image: "./assets/images/user.png",
                     contentText: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur assumenda fuga dolorum asperiores hic accusantium est reprehenderit veniam, ex nobis omnis corrupti iste iure porro, provident veritatis quae excepturi unde!",
                     title: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
                     date: "10 Nov 2021, 10:34",
@@ -75,10 +75,11 @@ const posts = Vue.createApp({
                     likeType: true,
                     dislikeType: false,
                     readed: true,
+                    contentImage: "./assets/images/temp-img.jpg"
                 },
                 {
                     id: 2,
-                    image: "https://avatars.githubusercontent.com/u/72465865?v=4",
+                    image: "./assets/images/user.png",
                     contentText: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur assumenda fuga dolorum asperiores hic accusantium est reprehenderit veniam, ex nobis omnis corrupti iste iure porro, provident veritatis quae excepturi unde!",
                     title: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
                     date: "10 Nov 2021, 10:34",
@@ -89,10 +90,11 @@ const posts = Vue.createApp({
                     likeType: false,
                     dislikeType: true,
                     readed: false,
+                    contentImage: ""
                 },
                 {
                     id: 3,
-                    image: "https://avatars.githubusercontent.com/u/72465865?v=4",
+                    image: "./assets/images/user.png",
                     contentText: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur assumenda fuga dolorum asperiores hic accusantium est reprehenderit veniam, ex nobis omnis corrupti iste iure porro, provident veritatis quae excepturi unde!",
                     title: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
                     date: "10 Nov 2021, 10:34",
@@ -103,10 +105,11 @@ const posts = Vue.createApp({
                     likeType: false,
                     dislikeType: false,
                     readed: false,
+                    contentImage: ""
                 },
                 {
                     id: 4,
-                    image: "https://avatars.githubusercontent.com/u/72465865?v=4",
+                    image: "./assets/images/user.png",
                     contentText: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur assumenda fuga dolorum asperiores hic accusantium est reprehenderit veniam, ex nobis omnis corrupti iste iure porro, provident veritatis quae excepturi unde!",
                     title: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
                     date: "10 Nov 2021, 10:34",
@@ -117,10 +120,11 @@ const posts = Vue.createApp({
                     likeType: true,
                     dislikeType: false,
                     readed: true,
+                    contentImage: "./assets/images/temp-img.jpg"
                 },
                 {
                     id: 5,
-                    image: "https://avatars.githubusercontent.com/u/72465865?v=4",
+                    image: "./assets/images/user.png",
                     contentText: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur assumenda fuga dolorum asperiores hic accusantium est reprehenderit veniam, ex nobis omnis corrupti iste iure porro, provident veritatis quae excepturi unde!",
                     title: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
                     date: "10 Nov 2021, 10:34",
@@ -131,10 +135,11 @@ const posts = Vue.createApp({
                     likeType: true,
                     dislikeType: false,
                     readed: true,
+                    contentImage: ""
                 },
                 {
                     id: 6,
-                    image: "https://avatars.githubusercontent.com/u/72465865?v=4",
+                    image: "./assets/images/user.png",
                     contentText: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur assumenda fuga dolorum asperiores hic accusantium est reprehenderit veniam, ex nobis omnis corrupti iste iure porro, provident veritatis quae excepturi unde!",
                     title: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
                     date: "10 Nov 2021, 10:34",
@@ -145,10 +150,11 @@ const posts = Vue.createApp({
                     likeType: false,
                     dislikeType: false,
                     readed: true,
+                    contentImage: "./assets/images/temp-img.jpg"
                 },
                 {
                     id: 7,
-                    image: "https://avatars.githubusercontent.com/u/72465865?v=4",
+                    image: "./assets/images/user.png",
                     contentText: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur assumenda fuga dolorum asperiores hic accusantium est reprehenderit veniam, ex nobis omnis corrupti iste iure porro, provident veritatis quae excepturi unde!",
                     title: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
                     date: "10 Nov 2021, 10:34",
@@ -159,10 +165,11 @@ const posts = Vue.createApp({
                     likeType: false,
                     dislikeType: false,
                     readed: true,
+                    contentImage: "./assets/images/temp-img.jpg"
                 },
                 {
                     id: 8,
-                    image: "https://avatars.githubusercontent.com/u/72465865?v=4",
+                    image: "./assets/images/user.png",
                     contentText: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur assumenda fuga dolorum asperiores hic accusantium est reprehenderit veniam, ex nobis omnis corrupti iste iure porro, provident veritatis quae excepturi unde!",
                     title: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
                     date: "10 Nov 2021, 10:34",
@@ -173,6 +180,7 @@ const posts = Vue.createApp({
                     likeType: true,
                     dislikeType: false,
                     readed: true,
+                    contentImage: ""
                 },
             ],
         };
@@ -206,3 +214,132 @@ const posts = Vue.createApp({
         }
     }
 }).mount('#posts');
+
+const popularPosts = Vue.createApp({
+    data(){
+        return{
+            posts : [
+                {
+                    id: 1,
+                    image: "./assets/images/user.png",
+                    contentText: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur assumenda fuga dolorum asperiores hic accusantium est reprehenderit veniam, ex nobis omnis corrupti iste iure porro, provident veritatis quae excepturi unde!",
+                    title: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+                    date: "10 Nov 2021, 10:34",
+                    like: 50,
+                    dislike: 15,
+                    postOwner: "Abdullah Agsar",
+                    readCount: 90,
+                    likeType: true,
+                    dislikeType: false,
+                    readed: true,
+                    contentImage: "./assets/images/temp-img.jpg"
+                },
+                {
+                    id: 2,
+                    image: "./assets/images/user.png",
+                    contentText: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur assumenda fuga dolorum asperiores hic accusantium est reprehenderit veniam, ex nobis omnis corrupti iste iure porro, provident veritatis quae excepturi unde!",
+                    title: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+                    date: "10 Nov 2021, 10:34",
+                    like: 50,
+                    dislike: 15,
+                    postOwner: "Abdullah Agsar",
+                    readCount: 90,
+                    likeType: false,
+                    dislikeType: true,
+                    readed: false,
+                    contentImage: ''
+                },
+                {
+                    id: 3,
+                    image: "./assets/images/user.png",
+                    contentText: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur assumenda fuga dolorum asperiores hic accusantium est reprehenderit veniam, ex nobis omnis corrupti iste iure porro, provident veritatis quae excepturi unde!",
+                    title: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+                    date: "10 Nov 2021, 10:34",
+                    like: 50,
+                    dislike: 15,
+                    postOwner: "Abdullah Agsar",
+                    readCount: 90,
+                    likeType: false,
+                    dislikeType: false,
+                    readed: false,
+                    contentImage: ''
+                },
+                {
+                    id: 4,
+                    image: "./assets/images/user.png",
+                    contentText: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur assumenda fuga dolorum asperiores hic accusantium est reprehenderit veniam, ex nobis omnis corrupti iste iure porro, provident veritatis quae excepturi unde!",
+                    title: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+                    date: "10 Nov 2021, 10:34",
+                    like: 50,
+                    dislike: 15,
+                    postOwner: "Abdullah Agsar",
+                    readCount: 90,
+                    likeType: true,
+                    dislikeType: false,
+                    readed: true,
+                    contentImage: "./assets/images/temp-img.jpg"
+                },
+                {
+                    id: 5,
+                    image: "./assets/images/user.png",
+                    contentText: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur assumenda fuga dolorum asperiores hic accusantium est reprehenderit veniam, ex nobis omnis corrupti iste iure porro, provident veritatis quae excepturi unde!",
+                    title: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+                    date: "10 Nov 2021, 10:34",
+                    like: 50,
+                    dislike: 15,
+                    postOwner: "Abdullah Agsar",
+                    readCount: 90,
+                    likeType: true,
+                    dislikeType: false,
+                    readed: true,
+                    contentImage: ''
+                },
+                {
+                    id: 6,
+                    image: "./assets/images/user.png",
+                    contentText: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur assumenda fuga dolorum asperiores hic accusantium est reprehenderit veniam, ex nobis omnis corrupti iste iure porro, provident veritatis quae excepturi unde!",
+                    title: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+                    date: "10 Nov 2021, 10:34",
+                    like: 50,
+                    dislike: 15,
+                    postOwner: "Abdullah Agsar",
+                    readCount: 90,
+                    likeType: false,
+                    dislikeType: false,
+                    readed: true,
+                    contentImage: "./assets/images/temp-img.jpg"
+                },
+                {
+                    id: 7,
+                    image: "./assets/images/user.png",
+                    contentText: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur assumenda fuga dolorum asperiores hic accusantium est reprehenderit veniam, ex nobis omnis corrupti iste iure porro, provident veritatis quae excepturi unde!",
+                    title: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+                    date: "10 Nov 2021, 10:34",
+                    like: 50,
+                    dislike: 15,
+                    postOwner: "Abdullah Agsar",
+                    readCount: 90,
+                    likeType: false,
+                    dislikeType: false,
+                    readed: true,
+                    contentImage: "./assets/images/temp-img.jpg"
+                },
+                {
+                    id: 8,
+                    image: "./assets/images/user.png",
+                    contentText: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur assumenda fuga dolorum asperiores hic accusantium est reprehenderit veniam, ex nobis omnis corrupti iste iure porro, provident veritatis quae excepturi unde!",
+                    title: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+                    date: "10 Nov 2021, 10:34",
+                    like: 50,
+                    dislike: 15,
+                    postOwner: "Abdullah Agsar",
+                    readCount: 90,
+                    likeType: true,
+                    dislikeType: false,
+                    readed: true,
+                    contentImage: ''
+                },
+            ],
+        };
+    },
+}).mount('#popular-posts');

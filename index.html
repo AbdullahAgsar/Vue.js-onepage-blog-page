@@ -34,7 +34,7 @@
             </div>
             <div class="user" id="user-dropdown">
                 <div class="user-image"  @click=" activeToggle = !activeToggle">
-                    <img src="https://avatars.githubusercontent.com/u/72465865?v=4" alt="user-image">
+                    <img src="./assets/images/user.png" alt="user-image">
                 </div>
 
                 <div class="user-dropdown"  :class="{ active : activeToggle }" >
@@ -141,13 +141,29 @@
                             </div>
                     </div>
                     <div class="post-infos">
+                        <img :src="post.contentImage" alt="content image" v-if=" post.contentImage!=='' ">
                         {{post.contentText}}
                     </div>
                 </div>
             </div>
 
-            <aside>
+            <aside id="popular-posts">
+                <div class="title">
+                    <i class="fas fa-fire"></i>
+                    Popular Posts
+                </div>
 
+                <div class="lidle-posts">
+                    <div class="post" v-for="lidlePost in posts" :key="lidlePost.id" v-show=" lidlePost.contentImage!=='' ">
+                        <a href="">
+                            <img :src=" lidlePost.contentImage " alt="post image">
+
+                            <div class="post-info">
+                                {{lidlePost.title}}
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </aside>
         </div>
     </main>

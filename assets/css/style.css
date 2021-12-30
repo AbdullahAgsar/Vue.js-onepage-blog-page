@@ -269,7 +269,7 @@ main .main-inner .content .post .post-top .user-info .left .user-name p {
   font-weight: 500;
 }
 main .main-inner .content .post .post-top .user-info .left .user-name p:last-child {
-  font-size: 9px;
+  font-size: 11px;
   color: #919191;
 }
 main .main-inner .content .post .post-top .user-info .right {
@@ -320,8 +320,48 @@ main .main-inner .content .post .post-infos {
   font-size: 1em;
   padding-bottom: 15px;
 }
+main .main-inner .content .post .post-infos img {
+  max-width: 60%;
+  min-width: 200px;
+  display: block;
+  margin: 0 auto 10px auto;
+}
 main .main-inner aside {
   min-width: 250px;
+}
+main .main-inner aside .title {
+  font-size: 1.3em;
+  font-weight: 500;
+  text-align: center;
+  padding-bottom: 12px;
+  border-bottom: 2px dashed #888;
+}
+main .main-inner aside .title i {
+  color: #ff2828;
+  font-size: 1.3em;
+  margin-right: 8px;
+}
+main .main-inner aside .lidle-posts {
+  padding: 20px 0;
+}
+main .main-inner aside .lidle-posts .post {
+  position: relative;
+  max-width: 250px;
+  margin-bottom: 20px;
+}
+main .main-inner aside .lidle-posts .post:last-child {
+  margin: 0;
+}
+main .main-inner aside .lidle-posts .post img {
+  max-width: 100%;
+}
+main .main-inner aside .lidle-posts .post .post-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 10px;
+  background-color: rgba(255, 255, 255, 0.432);
 }
 
 footer {
