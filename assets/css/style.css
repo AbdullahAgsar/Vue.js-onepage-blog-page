@@ -133,6 +133,9 @@ header .header-inner .user > i {
   transition: 300ms all;
 }
 
+main {
+  padding: 1em 2em;
+}
 main .main-inner {
   display: flex;
   column-gap: 20px;
@@ -140,17 +143,185 @@ main .main-inner {
   margin: auto;
 }
 main .main-inner #sidebar {
-  background-color: red;
-  width: 300px;
-  height: 100px;
+  border-radius: 15px;
+  padding: 10px;
+  border: 1px solid #30362F;
+}
+main .main-inner #sidebar i {
+  font-size: 1.2em;
+}
+main .main-inner #sidebar .sidebar-title {
+  display: flex;
+  align-items: baseline;
+  column-gap: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #30362F;
+  cursor: pointer;
+}
+main .main-inner #sidebar .sidebar-title i {
+  padding-left: 3px;
+}
+main .main-inner #sidebar nav {
+  width: 220px;
+  overflow-x: hidden;
+  transition: 500ms all ease-out;
+}
+main .main-inner #sidebar nav.close {
+  width: 42px;
+}
+main .main-inner #sidebar nav.close a {
+  height: 40px;
+  overflow: hidden;
+}
+main .main-inner #sidebar nav.close p {
+  display: none;
+}
+main .main-inner #sidebar nav ul {
+  width: 100%;
+  overflow: hidden;
+}
+main .main-inner #sidebar nav ul li {
+  width: 100%;
+  border-bottom: 1px solid #30362F;
+  transition: 600ms all;
+}
+main .main-inner #sidebar nav ul li:last-child {
+  border: none;
+}
+main .main-inner #sidebar nav ul li a {
+  padding: 10px 10px;
+  display: flex;
+  align-items: baseline;
+  column-gap: 10px;
+  width: 100%;
+  height: 40px;
+  cursor: pointer;
+}
+main .main-inner #sidebar nav ul li a p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: auto;
+}
+main .main-inner #sidebar nav ul li a + ul {
+  height: 0;
+  transition: 300ms all;
+  overflow: hidden;
+}
+main .main-inner #sidebar nav ul li a.show {
+  background-color: #30362F;
+  color: #FFFBDB;
+}
+main .main-inner #sidebar nav ul li a.show + ul {
+  height: auto;
+}
+main .main-inner #sidebar nav ul li a.show + ul li {
+  background-color: #625834;
+}
+main .main-inner #sidebar nav ul li a.show + ul li a {
+  color: #FFFBDB;
+}
+main .main-inner #sidebar nav ul li a.show + ul li:hover {
+  background-color: #FFFBDB;
+}
+main .main-inner #sidebar nav ul li a.show + ul li:hover a {
+  color: #30362F;
+}
+main .main-inner #sidebar nav ul li:hover {
+  background-color: #30362F;
+}
+main .main-inner #sidebar nav ul li:hover a {
+  color: white;
 }
 main .main-inner .content {
   flex: auto;
-  background-color: green;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+main .main-inner .content .post {
+  width: 100%;
+  border-bottom: 2px dashed #30362F;
+}
+main .main-inner .content .post .post-top .user-info {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .main-inner .content .post .post-top .user-info .left {
+  display: flex;
+  column-gap: 15px;
+  align-items: center;
+}
+main .main-inner .content .post .post-top .user-info .left .user-image img {
+  height: 40px;
+  border-radius: 50%;
+  outline: 3px solid #30362F;
+}
+main .main-inner .content .post .post-top .user-info .left .user-name {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+main .main-inner .content .post .post-top .user-info .left .user-name p {
+  font-size: 1em;
+  font-weight: 500;
+}
+main .main-inner .content .post .post-top .user-info .left .user-name p:last-child {
+  font-size: 9px;
+  color: #919191;
+}
+main .main-inner .content .post .post-top .user-info .right {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+main .main-inner .content .post .post-top .user-info .right div {
+  display: flex;
+  align-items: baseline;
+  column-gap: 7px;
+}
+main .main-inner .content .post .post-top .user-info .right div.active {
+  color: green;
+}
+main .main-inner .content .post .post-top .user-info .right div.active i {
+  color: green;
+}
+main .main-inner .content .post .post-top .user-info .right div.see {
+  color: blue;
+}
+main .main-inner .content .post .post-top .user-info .right div.see i {
+  color: blue;
+}
+main .main-inner .content .post .post-top .user-info .right div.passive {
+  color: red;
+}
+main .main-inner .content .post .post-top .user-info .right div.passive i {
+  color: red;
+}
+main .main-inner .content .post .post-top .user-info .right div:first-child i:hover {
+  color: green;
+}
+main .main-inner .content .post .post-top .user-info .right div:nth-child(2) i:hover {
+  color: red;
+}
+main .main-inner .content .post .post-top .user-info .right i {
+  color: #666;
+  cursor: pointer;
+  transition: 300ms all;
+}
+main .main-inner .content .post .post-top .post-title {
+  font-size: 1.3em;
+  font-weight: 700;
+  padding: 5px 0;
+}
+main .main-inner .content .post .post-infos {
+  font-size: 1em;
+  padding-bottom: 15px;
 }
 main .main-inner aside {
-  width: 300px;
-  background-color: black;
+  min-width: 250px;
 }
 
 footer {
